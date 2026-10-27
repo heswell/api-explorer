@@ -1,0 +1,12 @@
+/* Swagger UI's own stylesheet is light only, so it keeps a light background
+   in every portal theme. */
+.vuuApiExplorer {
+  background: #fff;
+  color-scheme: light;
+  height: 100%;
+  overflow: auto;
+}
+
+.vuuApiExplorer-error {
+  padding: var(--salt-spacing-200);
+}

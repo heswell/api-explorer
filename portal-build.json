@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "target": "remote-module",
+  "paths": {
+    "entry": "./src/index.tsx",
+    "htmlTemplate": "./public/index.html",
+    "output": "./dist",
+    "publicPath": "http://localhost:5008/"
+  },
+  "html": {
+    "title": "apiExplorer (standalone)"
+  },
+  "server": {
+    "corsOrigins": ["http://localhost:5001"]
+  },
+  "manifest": {
+    "filename": "./config.json",
+    "remote": {
+      "settings": {
+        "specUrl": "http://localhost:5008/test-api/openapi.json",
+        "tokenOrigins": ["http://localhost:8180"]
+      }
+    }
+  },
+  "moduleFederation": {
+    "name": "apiExplorer",
+    "dts": false,
+    "exposes": {
+      "./ApiExplorer": "./src/ApiExplorer"
+    },
+    "shared": {
+      "react": {
+        "requiredVersion": "^19.2.3",
+        "singleton": true,
+        "strictVersion": true
+      },
+      "react-dom": {
+        "requiredVersion": "^19.2.3",
+        "singleton": true,
+        "strictVersion": true
+      },
+      "@vuu-ui/core": {
+        "requiredVersion": "package",
+        "singleton": true,
+        "strictVersion": true
+      }
+    }
+  }
+}

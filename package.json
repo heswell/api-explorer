@@ -1,0 +1,45 @@
+{
+  "name": "api-explorer",
+  "version": "1.0.0",
+  "description": "Vuu portal remote module: explore and try a REST API from its OpenAPI document",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heswell/api-explorer.git"
+  },
+  "license": "Apache-2.0",
+  "author": "heswell",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "portal-build --config ./portal-build.json",
+    "start": "serve dist -l 5008",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "scarfSettings": {
+    "enabled": false
+  },
+  "dependencies": {
+    "@salt-ds/core": "1.72.0",
+    "@vuu-ui/core": "4.0.0-alpha.31",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "swagger-ui-react": "5.34.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/swagger-ui-react": "5.18.0",
+    "@vuu-ui/portal-build": "0.4.0",
+    "happy-dom": "^20.0.10",
+    "serve": "^14.2.6",
+    "typescript": "7.0.2",
+    "vitest": "3.1.1"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
